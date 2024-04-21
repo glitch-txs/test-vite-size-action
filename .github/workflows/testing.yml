@@ -15,6 +15,6 @@ jobs:
       - run: npm install
       - name: Calling vite-size script
         id: vite-size
-        uses: glitch-txs/vite-size-action@v1.0.2
+        uses: glitch-txs/vite-size-action@v1.0.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
