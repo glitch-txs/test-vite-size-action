@@ -18,7 +18,8 @@ const chains = [mainnet, arbitrum] as const
 export const config = defaultWagmiConfig({
   chains,
   projectId,
-  metadata
+  metadata,
+  enableEmail: true,
 })
 reconnect(config)
 
@@ -26,8 +27,8 @@ reconnect(config)
 const modal = createWeb3Modal({
   wagmiConfig: config,
   projectId,
-  enableAnalytics: true, // Optional - defaults to your Cloud configuration
-  enableOnramp: true // Optional - false as default
+  enableAnalytics: true,
+  enableOnramp: true
 })
 
 console.log(modal)
